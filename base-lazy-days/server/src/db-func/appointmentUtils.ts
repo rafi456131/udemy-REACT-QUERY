@@ -17,7 +17,6 @@ function makeAppointment(
   existingAppointmentsById: Record<number, Appointment>,
 ): Appointment {
   const id = Number(dayjs(dateTime).unix());
-
   // if the appointment is filled, don't make the recurring appointment
   if (existingAppointmentsById[id]) return existingAppointmentsById[id];
 
